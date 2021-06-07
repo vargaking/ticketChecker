@@ -4,23 +4,13 @@ import { BarCodeScanner } from 'expo-barcode-scanner';
 import firebase from 'firebase/app';
 import database from 'firebase/database';
 import md5 from 'md5';
-import Dialog from 'react-native-dialog';
-import { withTheme } from 'styled-components';
-import * as Print from 'expo-print';
 import RadioButtonRN from 'radio-buttons-react-native';
 
 
 var {vw, vh, vmin, vmax} = require('react-native-viewport-units');
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC0KfuTyZma39My4C1jJ1UHS3gubsTRWC4",
-  authDomain: "fazedok-qrcodereader.firebaseapp.com",
-  databaseURL: "https://fazedok-qrcodereader-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "fazedok-qrcodereader",
-  storageBucket: "fazedok-qrcodereader.appspot.com",
-  messagingSenderId: "233095677994",
-  appId: "1:233095677994:web:75ffc32258723da09adb53",
-  measurementId: "G-8HB20KDL5G"
+  //your firebase config
 };
 
 if (firebase.apps.length === 0) {
@@ -47,29 +37,12 @@ export default function App() {
   //radio buttons
   const data = [
     {
-      label: 'San Benedetto Zöld'
+      label: 'Option1'
     },
     {
-      label: 'San Benedetto Citrom'
+      label: 'Option2'
     },
-    {
-      label: 'San Benedetto Barack'
-    },
-    {
-      label: 'Pepsi'
-    },
-    {
-      label: 'Pepsi Black'
-    },
-    {
-      label: 'Pepsi Lime'
-    },
-    {
-      label: 'Szénsavmentes víz'
-    },
-    {
-      label: 'Szénsavas víz'
-    },
+    
   ]
 
   useEffect(() => {
@@ -119,7 +92,6 @@ export default function App() {
   }
 
 
-  //TODO: privát kulcs duplikálás letiltása
   function checkForUsed(key) {
     firebase.database().get().then((snapshot) => {
       console.log(snapshot);
@@ -155,16 +127,7 @@ export default function App() {
     setScanned(true);
     setQrCode(data);
     getData(data)
-    setTimeout(() => {
-      if (ticketIsValid == true) {
-        console.log('joajegy');
-        //setCurrentPage("Érvényes jegy");
-        
-      }else{
-        console.log('roszajegy');
-        //setCurrentPage("Érvénytelen jegy");
-      }
-    }, 1000);
+    
     
   };
 
