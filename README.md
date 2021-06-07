@@ -27,10 +27,12 @@ Utána néhány dolgot még be kell állítgatni
  **1. Másolj át mindent a repoban található app.js-ből a projekted mappájában található app.js file-ba**
  
  **2.  Állítsd be a firebase-t**
+ 
  Menj el a console.firebase.google.com oldalra és csinálj egy új projektet az instrukciókat követve. Utána nyisd meg a Realtime Database lapot, indítsd el test mode-ban és a rules tabon mindent írj át true-ra.
  Utána nyisd meg az app.js file-t és a firebaseConfig nevű const-on belül másold be a saját adataid (project settings -> Your apps)
  
  **3. Állítsd be a jegytípusokat**
+ 
  Az app.js file-ban írd át a labeleket, illetve ha szükséges adj hozzá újakat az előzőek mintájára. Emellett érdemes beállítani a config file-od, valamint kicserélni a különböző indexképeket a sajátjaidra. További információkhoz olvasd el az expo dokumentációt. 
  
 
