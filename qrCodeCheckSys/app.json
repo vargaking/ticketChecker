@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Fazekas Jegyellenőrző",
+    "slug": "fazekasJegyellenorzo",
+    "version": "1.0.5",
+    "orientation": "portrait",
+    "icon": "./assets/faze.png",
+    "splash": {
+      "image": "./assets/faze.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/faze.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.vargaking.fazekasJegyellenorzo"
+    },
+    "web": {
+      "favicon": "./assets/faze.png"
+    },
+    "description": ""
+  }
+}
